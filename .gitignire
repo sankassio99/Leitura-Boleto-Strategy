@@ -1,5 +1,5 @@
 out/
 .idea/
-src/LeituraBoletoBancoBrasil
-src/LeituraBoletoBradesco
-src/LeituraRetorno
+src/LeituraBoletoBancoBrasil.java
+src/LeituraBoletoBradesco.java
+src/LeituraRetorno.java
