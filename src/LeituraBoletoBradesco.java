@@ -4,12 +4,14 @@ import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeituraBoletoBradesco implements LeituraRetorno{
+public class LeituraBoletoBradesco {
+    private static DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static DateTimeFormatter FORMATO_DATA_HORA = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-    @Override
     public List<Boleto> lerArquivo(String nomeArquivo) {
         try {
             BufferedReader reader =

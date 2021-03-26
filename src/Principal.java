@@ -13,10 +13,10 @@ public class Principal {
 
         if(op==1){
             nomeArquivo = "banco-brasil-1.csv" ;
-            processarBoleto = new ProcessarBoleto(new LeituraBoletoBancoBrasil());
+            processarBoleto = new ProcessarBoleto(ProcessarBoleto::lerBancoBrasil);
         }else{
             nomeArquivo = "bradesco-1.csv" ;
-            processarBoleto = new ProcessarBoleto(new LeituraBoletoBradesco());
+            processarBoleto = new ProcessarBoleto(ProcessarBoleto::lerBradesco);
         }
 
         System.out.println("Lendo Boleto: "+nomeArquivo);
